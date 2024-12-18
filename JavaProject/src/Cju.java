@@ -31,6 +31,10 @@ public class Cju extends JFrame {
 			 }
 			
 		});
+		
+		private static void RestaurantFile(String filename) {
+	        
+	    }
 
 		setTitle("캠퍼스 식당 메뉴 및 대기 시간 알리미");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
