@@ -15,8 +15,7 @@ public class Cju extends JFrame {
 	private JComboBox<String> menuComboBox;
 	private JLabel waiting;
 	private static ArrayList<Menu> menuData = new ArrayList<>();
-	private static HashMap<String, Integer> menuWaitTimeMap = new HashMap<>();  
-
+	private static HashMap<String, Integer> menuWaitTimeMap = new HashMap<>();
 
 	public Cju() {
 
@@ -31,7 +30,7 @@ public class Cju extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String selectMenu = (String) menuComboBox.getSelectedItem();
 				int waitTime = getWaitTime(selectMenu);
-				waiting.setText("대기 시간: " + waitTime);
+				waiting.setText("대기 시간: " + waitTime + "분");
 
 			}
 
@@ -52,6 +51,10 @@ public class Cju extends JFrame {
 
 	}
 
+	private int getWaitTime(String menuName) {
+		
+		
+	}
 
 	public static void main(String[] args) {
 		new Cju();
@@ -67,4 +70,5 @@ class Menu {
 		this.name = name;
 		this.waiting = waiting;
 	}
+	public 
 }
