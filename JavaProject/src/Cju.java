@@ -24,6 +24,9 @@ public class Cju extends JFrame {
 		
 		menuComboBox.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
+				 String selectMenu = (String) menuComboBox.getSelectedItem();
+				 int waitTime = getWaitTime(selectMenu);
+				 waiting.setText("대기 시간: " + waitTime);
 				 
 			 }
 			
