@@ -9,6 +9,10 @@ public class Cju extends JFrame {
 	
 
 	public Cju() {
+		
+		menuComboBox = new JComboBox<>();
+        add(new JLabel("메뉴 선택:"));
+        add(menuComboBox);
 
 		setTitle("캠퍼스 식당 메뉴 및 대기 시간 알리미");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
