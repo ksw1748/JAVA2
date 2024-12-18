@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -14,6 +15,8 @@ public class Cju extends JFrame {
 	private JComboBox<String> menuComboBox;
 	private JLabel waiting;
 	private static ArrayList<Menu> menuData = new ArrayList<>();
+	private static HashMap<String, Integer> menuWaitTimeMap = new HashMap<>();  
+
 
 	public Cju() {
 
