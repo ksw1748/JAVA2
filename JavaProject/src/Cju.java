@@ -1,6 +1,8 @@
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 
 import javax.swing.JComboBox;
@@ -21,27 +23,31 @@ public class Cju extends JFrame {
 
 		waiting = new JLabel("대기 시간: ");
 		add(waiting);
-		
+
 		menuComboBox.addActionListener(new ActionListener() {
-			 public void actionPerformed(ActionEvent e) {
-				 String selectMenu = (String) menuComboBox.getSelectedItem();
-				 int waitTime = getWaitTime(selectMenu);
-				 waiting.setText("대기 시간: " + waitTime);
-				 
-			 }
-			
+			public void actionPerformed(ActionEvent e) {
+				String selectMenu = (String) menuComboBox.getSelectedItem();
+				int waitTime = getWaitTime(selectMenu);
+				waiting.setText("대기 시간: " + waitTime);
+
+			}
+
 		});
-		
-		
+
 		setTitle("캠퍼스 식당 메뉴 및 대기 시간 알리미");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(400, 300);
 		setVisible(true);
 		setLayout(new FlowLayout());
+
 	}
+
 	private static void RestaurantFile(String filename) {
-        
-    }
+		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+
+		}
+
+	}
 
 
 	public static void main(String[] args) {
@@ -53,4 +59,9 @@ public class Cju extends JFrame {
 class Menu {
 	private String name;
 	private int waiting;
+
+	public Menu(String name, int waiting) {
+		this.name = name;
+		this.waiting = waiting;
+	}
 }
