@@ -3,9 +3,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Cju extends JFrame {
-	private JComboBox<String> restaurantComboBox;
+	private String restaurant = "학교 식당";
 	private JComboBox<String> menuComboBox;
 	private JLabel waiting;
+	
 
 	public Cju() {
 
