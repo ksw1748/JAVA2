@@ -45,9 +45,8 @@ public class Cju extends JFrame {
 	}
 
 	private static void RestaurantFile(String filename) {
-		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
-
-		}
+		BufferedReader br = null;
+		br = new BufferedReader(new FileReader(filename));
 
 	}
 
@@ -74,9 +73,9 @@ class Menu {
 	public String getName() {
 		return name;
 	}
-	
-	 public String getWaiting() {
-	        return name;
-	    }
+
+	public String getWaiting() {
+		return name;
+	}
 
 }
