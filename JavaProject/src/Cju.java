@@ -45,6 +45,7 @@ public class Cju extends JFrame {
 	}
 
 	private static void RestaurantFile(String filename) {
+		String line;
 		BufferedReader br = null;
 		br = new BufferedReader(new FileReader(filename));
 
