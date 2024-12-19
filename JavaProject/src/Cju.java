@@ -52,8 +52,8 @@ public class Cju extends JFrame {
 	}
 
 	private int getWaitTime(String menuName) {
-		
-		
+		return menuWaitTimeMap.getOrDefault(menuName, 0);
+
 	}
 
 	public static void main(String[] args) {
@@ -70,5 +70,13 @@ class Menu {
 		this.name = name;
 		this.waiting = waiting;
 	}
-	public 
+
+	public String getName() {
+		return name;
+	}
+	
+	 public String getWaiting() {
+	        return name;
+	    }
+
 }
