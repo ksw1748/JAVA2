@@ -48,6 +48,9 @@ public class Cju extends JFrame {
 		String line;
 		BufferedReader br = null;
 		br = new BufferedReader(new FileReader(filename));
+		while ((line = br.readLine())!= null) {
+			
+		}
 
 	}
 
