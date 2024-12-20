@@ -51,7 +51,9 @@ public class Cju extends JFrame {
 		while ((line = br.readLine()) != null) {
             String[] menuInfo = line.split(","); 
             String menuName = menuInfo[0];
-            int waitTime = Integer.parseInt(menuInfo[1]);	
+            int waitTime = Integer.parseInt(menuInfo[1]);
+            
+            menuData.add(new Menu(menuName, waitTime));
              
 
 	}
