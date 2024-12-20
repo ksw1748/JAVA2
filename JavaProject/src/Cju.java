@@ -24,9 +24,11 @@ public class Cju extends JFrame {
 
 		JPanel p = new JPanel();
 		p.setBackground(Color.decode("#003B5C"));
+		p.setLayout(new FlowLayout(FlowLayout.CENTER));
 
 		JLabel headerLabel = new JLabel("캠퍼스 식당 메뉴 및 대기 시간 알리미");
 		headerLabel.setForeground(Color.WHITE);
+		headerLabel.setFont(headerLabel.getFont().deriveFont(22f));
 		p.add(headerLabel);
 		
 		add(p, "North");
