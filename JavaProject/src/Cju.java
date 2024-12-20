@@ -50,6 +50,8 @@ public class Cju extends JFrame {
 		br = new BufferedReader(new FileReader(filename));
 		while ((line = br.readLine()) != null) {
             String[] menuInfo = line.split(","); 
+            String menuName = menuInfo[0];
+            int waitTime = Integer.parseInt(menuInfo[1]);	
              
 
 	}
