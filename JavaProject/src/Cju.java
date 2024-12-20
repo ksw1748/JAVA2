@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -25,14 +26,17 @@ public class Cju extends JFrame {
 
 		JPanel p = new JPanel();
 		p.setBackground(Color.decode("#003B5C"));
-		p.setLayout(new FlowLayout(FlowLayout.CENTER));
+		p.setLayout(new BorderLayout());
 
-		JLabel headerLabel = new JLabel("캠퍼스 식당 메뉴 및 대기 시간 알리미");
-		headerLabel.setForeground(Color.WHITE);
-		headerLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 22));
-		p.add(headerLabel);
+		JLabel headerLabel = new JLabel("캠퍼스 식당 메뉴 및 대기 시간 알리미", JLabel.CENTER);
+        headerLabel.setForeground(Color.WHITE);
+        headerLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 18));  
+        p.add(headerLabel, BorderLayout.CENTER);  
 
-		add(p, "North");
+        
+        p.setPreferredSize(new java.awt.Dimension(400, 50));  
+        add(p, BorderLayout.NORTH);
+		
 
 		menuComboBox = new JComboBox<>();
 		add(new JLabel("메뉴 선택:"));
