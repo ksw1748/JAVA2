@@ -54,6 +54,7 @@ public class Cju extends JFrame {
             int waitTime = Integer.parseInt(menuInfo[1]);
             
             menuData.add(new Menu(menuName, waitTime));
+            menuWaitTimeMap.put(menuName, waitTime);
              
 
 	}
