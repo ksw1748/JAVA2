@@ -30,7 +30,7 @@ public class Cju extends JFrame {
 		headerLabel.setForeground(Color.WHITE);
 		headerLabel.setFont(headerLabel.getFont().deriveFont(22f));
 		p.add(headerLabel);
-		
+
 		add(p, "North");
 
 		menuComboBox = new JComboBox<>();
@@ -55,6 +55,8 @@ public class Cju extends JFrame {
 		setSize(400, 300);
 		setVisible(true);
 		setLayout(new FlowLayout());
+
+		getContentPane().setBackground(Color.WHITE);
 
 		RestaurantFile();
 
