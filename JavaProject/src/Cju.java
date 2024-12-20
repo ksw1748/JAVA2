@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -28,7 +29,7 @@ public class Cju extends JFrame {
 
 		JLabel headerLabel = new JLabel("캠퍼스 식당 메뉴 및 대기 시간 알리미");
 		headerLabel.setForeground(Color.WHITE);
-		headerLabel.setFont(headerLabel.getFont().deriveFont(22f));
+		headerLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 22));
 		p.add(headerLabel);
 
 		add(p, "North");
