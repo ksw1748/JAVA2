@@ -44,6 +44,10 @@ public class Cju extends JFrame {
 		setLayout(new FlowLayout());
 
 		RestaurantFile();
+		
+		for (Menu menu : menuData) {
+            menuComboBox.addItem(menu.getName());
+        }	
 
 	}
 
