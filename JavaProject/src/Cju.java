@@ -3,6 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -41,31 +42,31 @@ public class Cju extends JFrame {
 		setSize(400, 300);
 		setVisible(true);
 		setLayout(new FlowLayout());
-		
+
 		RestaurantFile();
 
 	}
 
-	 private static void RestaurantFile() {
-	        try (BufferedReader reader = new BufferedReader(new FileReader("restaurant.txt"))) {
-	            String line;
-	            while ((line = reader.readLine()) != null) {
-	                
-	                String[] parts = line.split(",");
-	                if (parts.length == 2) {
-	                    String menuName = parts[0];
-	                    int waitingTime = Integer.parseInt(parts[1]);
-	                    
-	                    
-	                    Menu menu = new Menu(menuName, waitingTime);
-	                    menuData.add(menu);
-	                    menuWaitTimeMap.put(menuName, waitingTime);
-	                }
-	            }
-	        } catch (IOException e) {
-	            
-	        }
-	    } 
+	private static void RestaurantFile() {
+		try (BufferedReader reader = new BufferedReader(new FileReader("restaurant.txt"))) {
+			String line;
+			while ((line = reader.readLine()) != null) {
+
+				String[] parts = line.split(",");
+				if (parts.length == 2) {
+					String menuName = parts[0].trim();
+					int waitingTime = Integer.parseInt(parts[1].trim());
+
+					Menu menu = new Menu(menuName, waitingTime);
+					menuData.add(menu);
+					menuWaitTimeMap.put(menuName, waitingTime);
+				}
+			}
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+
+		}
+	}
 
 	private int getWaitTime(String menuName) {
 		return menuWaitTimeMap.getOrDefault(menuName, 0);
