@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +11,7 @@ import java.util.HashMap;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 public class Cju extends JFrame {
 	private String restaurant = "학교 식당";
@@ -19,6 +21,9 @@ public class Cju extends JFrame {
 	private static HashMap<String, Integer> menuWaitTimeMap = new HashMap<>();
 
 	public Cju() {
+		
+		JPanel p = new JPanel();
+		p.setBackground(Color.decode("#000080"));
 
 		menuComboBox = new JComboBox<>();
 		add(new JLabel("메뉴 선택:"));
@@ -44,10 +49,10 @@ public class Cju extends JFrame {
 		setLayout(new FlowLayout());
 
 		RestaurantFile();
-		
+
 		for (Menu menu : menuData) {
-            menuComboBox.addItem(menu.getName());
-        }	
+			menuComboBox.addItem(menu.getName());
+		}
 
 	}
 
