@@ -23,10 +23,13 @@ public class Cju extends JFrame {
 	public Cju() {
 
 		JPanel p = new JPanel();
-		p.setBackground(Color.decode("#000080"));
+		p.setBackground(Color.decode("#003B5C"));
 
 		JLabel headerLabel = new JLabel("캠퍼스 식당 메뉴 및 대기 시간 알리미");
 		headerLabel.setForeground(Color.WHITE);
+		p.add(headerLabel);
+		
+		add(p, "North");
 
 		menuComboBox = new JComboBox<>();
 		add(new JLabel("메뉴 선택:"));
