@@ -41,23 +41,31 @@ public class Cju extends JFrame {
 		setSize(400, 300);
 		setVisible(true);
 		setLayout(new FlowLayout());
+		
+		RestaurantFile();
 
 	}
 
-	private static void RestaurantFile(String filename) {
-		String line;
-		BufferedReader br = null;
-		br = new BufferedReader(new FileReader(filename));
-		while ((line = br.readLine()) != null) {
-            String[] menuInfo = line.split(","); 
-            String menuName = menuInfo[0];
-            int waitTime = Integer.parseInt(menuInfo[1]);
-            
-            menuData.add(new Menu(menuName, waitTime));
-            menuWaitTimeMap.put(menuName, waitTime);
-             
-
-	}
+	 private static void RestaurantFile() {
+	        try (BufferedReader reader = new BufferedReader(new FileReader("restaurant.txt"))) {
+	            String line;
+	            while ((line = reader.readLine()) != null) {
+	                
+	                String[] parts = line.split(",");
+	                if (parts.length == 2) {
+	                    String menuName = parts[0];
+	                    int waitingTime = Integer.parseInt(parts[1]);
+	                    
+	                    
+	                    Menu menu = new Menu(menuName, waitingTime);
+	                    menuData.add(menu);
+	                    menuWaitTimeMap.put(menuName, waitingTime);
+	                }
+	            }
+	        } catch (IOException e) {
+	            
+	        }
+	    } 
 
 	private int getWaitTime(String menuName) {
 		return menuWaitTimeMap.getOrDefault(menuName, 0);
