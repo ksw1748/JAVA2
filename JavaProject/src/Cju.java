@@ -46,6 +46,7 @@ public class Cju extends JFrame {
 		add(menuComboBox);
 
 		waiting = new JLabel("대기 시간: ");
+		waiting.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
         add(waiting);
 
 		menuComboBox.addActionListener(new ActionListener() {
