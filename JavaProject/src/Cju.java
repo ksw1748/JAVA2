@@ -41,18 +41,18 @@ public class Cju extends JFrame {
 		add(p, BorderLayout.NORTH);
 
 		JLabel menuLabel = new JLabel("메뉴 선택:");
-		menuLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		menuLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 13));
 		add(menuLabel);
 
 		menuComboBox = new JComboBox<>();
 		add(menuComboBox);
 
 		waiting = new JLabel("대기 시간: ");
-		waiting.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		waiting.setFont(new Font("Malgun Gothic", Font.BOLD, 13));
 		add(waiting);
 
 		refreshButton = new JButton("대기 시간 갱신");
-		refreshButton.setFont(new Font("Malgun Gothic", Font.BOLD, 12));
+		refreshButton.setFont(new Font("Malgun Gothic", Font.BOLD, 11));
 		refreshButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String selectMenu = (String) menuComboBox.getSelectedItem();
