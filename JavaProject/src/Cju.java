@@ -54,10 +54,8 @@ public class Cju extends JFrame {
 			}
 
 		});
+		ImageIcon logoIcon = new ImageIcon("image/logo.jpg");  
 		
-		JPanel logo = new JPanel();
-        logo.setLayout(new BorderLayout());
-
 		setTitle("캠퍼스 식당 메뉴 및 대기 시간 알리미");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(400, 300);
