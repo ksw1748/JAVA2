@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -21,6 +22,7 @@ public class Cju extends JFrame {
 	private String restaurant = "학교 식당";
 	private JComboBox<String> menuComboBox;
 	private JLabel waiting;
+	private JButton refreshButton;
 	private static ArrayList<Menu> menuData = new ArrayList<>();
 	private static HashMap<String, Integer> menuWaitTimeMap = new HashMap<>();
 
@@ -47,7 +49,10 @@ public class Cju extends JFrame {
 
 		waiting = new JLabel("대기 시간: ");
 		waiting.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
-        add(waiting);
+		add(waiting);
+		
+		refreshButton = new JButton("대기 시간 갱신");
+        
 
 		menuComboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
