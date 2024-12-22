@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -10,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -29,14 +31,12 @@ public class Cju extends JFrame {
 		p.setLayout(new BorderLayout());
 
 		JLabel headerLabel = new JLabel("캠퍼스 식당 메뉴 및 대기 시간 알리미", JLabel.CENTER);
-        headerLabel.setForeground(Color.WHITE);
-        headerLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 18));  
-        p.add(headerLabel, BorderLayout.CENTER);  
+		headerLabel.setForeground(Color.WHITE);
+		headerLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 18));
+		p.add(headerLabel, BorderLayout.CENTER);
 
-        
-        p.setPreferredSize(new java.awt.Dimension(400, 50));  
-        add(p, BorderLayout.NORTH);
-		
+		p.setPreferredSize(new java.awt.Dimension(400, 50));
+		add(p, BorderLayout.NORTH);
 
 		menuComboBox = new JComboBox<>();
 		add(new JLabel("메뉴 선택:"));
@@ -54,6 +54,9 @@ public class Cju extends JFrame {
 			}
 
 		});
+		
+		JPanel logo = new JPanel();
+        logo.setLayout(new BorderLayout());
 
 		setTitle("캠퍼스 식당 메뉴 및 대기 시간 알리미");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
