@@ -53,6 +53,8 @@ public class Cju extends JFrame {
 
 		refreshButton = new JButton("대기 시간 갱신");
 		refreshButton.setFont(new Font("Malgun Gothic", Font.BOLD, 11));
+		refreshButton.setBackground(Color.decode("#1E90FF"));
+		refreshButton.setForeground(Color.WHITE);
 		refreshButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String selectMenu = (String) menuComboBox.getSelectedItem();
