@@ -90,6 +90,7 @@ public class Cju extends JFrame {
 				waiting.setText("대기 시간: " + waitTime + "분");
 			}
 		});
+		
 		add(refreshButton);
 
 		menuComboBox.addActionListener(new ActionListener() {
