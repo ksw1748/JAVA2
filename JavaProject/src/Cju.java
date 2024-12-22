@@ -50,9 +50,17 @@ public class Cju extends JFrame {
 		waiting = new JLabel("대기 시간: ");
 		waiting.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
 		add(waiting);
-		
+
 		refreshButton = new JButton("대기 시간 갱신");
-        
+		refreshButton.setFont(new Font("Malgun Gothic", Font.BOLD, 12));
+		refreshButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String selectMenu = (String) menuComboBox.getSelectedItem();
+				int waitTime = getWaitTime(selectMenu);
+				waiting.setText("대기 시간: " + waitTime + "분");
+			}
+		});
+		add(refreshButton);
 
 		menuComboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
