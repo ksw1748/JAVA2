@@ -38,12 +38,15 @@ public class Cju extends JFrame {
 		p.setPreferredSize(new java.awt.Dimension(400, 50));
 		add(p, BorderLayout.NORTH);
 
+		JLabel menuLabel = new JLabel("메뉴 선택:");
+		menuLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		add(menuLabel);
+
 		menuComboBox = new JComboBox<>();
-		add(new JLabel("메뉴 선택:"));
 		add(menuComboBox);
 
 		waiting = new JLabel("대기 시간: ");
-		add(waiting);
+        add(waiting);
 
 		menuComboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -55,7 +58,7 @@ public class Cju extends JFrame {
 
 		});
 		ImageIcon logoIcon = new ImageIcon("image/logo.jpg");
-		Image logoImage = logoIcon.getImage().getScaledInstance(180, 180, Image.SCALE_SMOOTH);
+		Image logoImage = logoIcon.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
 		ImageIcon scaledLogoIcon = new ImageIcon(logoImage);
 		JLabel logoLabel = new JLabel(scaledLogoIcon);
 		add(logoLabel);
