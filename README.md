@@ -31,5 +31,6 @@
 [결과 표시 (대기 시간)]
 ```
 #### 3.2 클래스 다이어그램
+![클래스 다이어그램](https://github.com/user-attachments/assets/384c9def-c4b2-419b-b6ae-61090a5cea1e)
 
 
